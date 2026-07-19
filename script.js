@@ -1,13 +1,45 @@
-function searchCard(){
+function rechercherCarte() {
 
-let code = document.getElementById("searchInput").value.toUpperCase();
+const recherche = document.getElementById("searchInput").value.toLowerCase();
 
-let result = document.getElementById("result");
+const resultat = document.getElementById("result");
 
-if(code==""){
-    result.innerHTML="Veuillez entrer un code.";
-    return;
+if(recherche===""){
+resultat.innerHTML="";
+return;
 }
 
-result.innerHTML="Recherche de : <strong>"+code+"</strong><br>Cette fonctionnalité sera bientôt connectée à la base de données Battle Crawler.";
+const carte = cards.find(c =>
+c.id.toLowerCase().includes(recherche) ||
+c.nom.toLowerCase().includes(recherche)
+);
+
+if(carte){
+
+resultat.innerHTML=`
+<div class="card">
+
+<h2>${carte.nom}</h2>
+
+<p><strong>ID :</strong> ${carte.id}</p>
+
+<p><strong>Catégorie :</strong> ${carte.categorie}</p>
+
+<p><strong>Élément :</strong> ${carte.element}</p>
+
+<p><strong>Météo :</strong> ${carte.meteo}</p>
+
+<p><strong>Bonus :</strong> ${carte.bonus}</p>
+
+<p><strong>Récompense :</strong> ${carte.recompense}</p>
+
+</div>
+`;
+
+}else{
+
+resultat.innerHTML="<p>Aucune carte trouvée.</p>";
+
+}
+
 }
