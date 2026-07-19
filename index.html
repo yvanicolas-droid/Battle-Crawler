@@ -88,6 +88,96 @@ des Alpha redoutables et une aventure sans fin.
 <p>L'encyclopédie complète.</p>
 </div>
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle Crawler</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>BATTLE CRAWLER</h1>
+
+<p>Le jeu de cartes d'aventure</p>
+
+</header>
+
+<nav>
+
+<a href="#">Accueil</a>
+<a href="Creatures/">Creatures</a>
+<a href="Stuff/">Stuff</a>
+<a href="Alpha/">Alpha</a>
+<a href="bestiaire/">Bestiaire</a>
+<a href="regles/">Règles</a>
+<a href="meteo/">Météo</a>
+
+</nav>
+
+<section class="search">
+
+<h2>🔍 Rechercher une carte</h2>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Exemple : CRE0001, STF0004, ALP0002">
+
+<button onclick="searchCard()">
+Rechercher
+</button>
+
+<p id="result"></p>
+
+</section>
+
+<section class="banner">
+
+<div class="overlay">
+
+<h2>Explorez les Donjons</h2>
+
+<p>
+Des centaines de Creatures, des Stuff légendaires,
+des Alpha redoutables et une aventure sans fin.
+</p>
+
+<a href="Creatures/" class="play-button">
+⚔ Commencer l'aventure
+</a>
+
+</div>
+
+</section>
+
+<section class="categories">
+
+<div class="card">
+<h3>👹 Creatures</h3>
+<p>Toutes les créatures du jeu.</p>
+</div>
+
+<div class="card">
+<h3>🛡 Stuff</h3>
+<p>Armes, armures et équipements.</p>
+</div>
+
+<div class="card">
+<h3>👑 Alpha</h3>
+<p>Les ennemis les plus puissants.</p>
+</div>
+
+<div class="card">
+<h3>📖 Bestiaire</h3>
+<p>L'encyclopédie complète.</p>
+</div>
+
 </section>
 
 <footer>
@@ -95,6 +185,11 @@ des Alpha redoutables et une aventure sans fin.
 Battle Crawler © 2026
 
 </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
 
 <script src="script.js"></script>
 
