@@ -150,3 +150,71 @@ footer{
     line-height:1.8;
     margin-bottom:40px;
 }
+
+.search{
+
+padding:60px 20px;
+
+text-align:center;
+
+background:#18110b;
+
+}
+
+.search h2{
+
+margin-bottom:25px;
+
+color:#f2cb70;
+
+}
+
+.search input{
+
+width:320px;
+
+max-width:90%;
+
+padding:15px;
+
+border-radius:10px;
+
+border:none;
+
+font-size:18px;
+
+margin-bottom:15px;
+
+}
+
+.search button{
+
+padding:15px 30px;
+
+background:#d4a73f;
+
+border:none;
+
+border-radius:10px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+.search button:hover{
+
+background:#f0c766;
+
+}
+
+#result{
+
+margin-top:25px;
+
+font-size:20px;
+
+color:#fff;
+
+}
