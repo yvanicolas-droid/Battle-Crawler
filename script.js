@@ -1,45 +1,25 @@
-function rechercherCarte() {
+document.addEventListener("DOMContentLoaded", () => {
 
-const recherche = document.getElementById("searchInput").value.toLowerCase();
+  const liste = document.getElementById("liste-creatures");
 
-const resultat = document.getElementById("result");
+  if (!liste || typeof creatures === "undefined") return;
 
-if(recherche===""){
-resultat.innerHTML="";
-return;
-}
+  creatures.forEach(creature => {
 
-const carte = cards.find(c =>
-c.id.toLowerCase().includes(recherche) ||
-c.nom.toLowerCase().includes(recherche)
-);
+    const carte = document.createElement("div");
+    carte.className = "card";
 
-if(carte){
+    carte.innerHTML = `
+      <h2>${creature.nom}</h2>
+      <p><strong>ID :</strong> ${creature.id}</p>
+      <p><strong>Élément :</strong> ${creature.element}</p>
+      <p><strong>Biome :</strong> ${creature.biome}</p>
+      <p><strong>Puissance :</strong> ${creature.puissance}</p>
+      <p>${creature.description}</p>
+    `;
 
-resultat.innerHTML=`
-<div class="card">
+    liste.appendChild(carte);
 
-<h2>${carte.nom}</h2>
+  });
 
-<p><strong>ID :</strong> ${carte.id}</p>
-
-<p><strong>Catégorie :</strong> ${carte.categorie}</p>
-
-<p><strong>Élément :</strong> ${carte.element}</p>
-
-<p><strong>Météo :</strong> ${carte.meteo}</p>
-
-<p><strong>Bonus :</strong> ${carte.bonus}</p>
-
-<p><strong>Récompense :</strong> ${carte.recompense}</p>
-
-</div>
-`;
-
-}else{
-
-resultat.innerHTML="<p>Aucune carte trouvée.</p>";
-
-}
-
-}
+});
