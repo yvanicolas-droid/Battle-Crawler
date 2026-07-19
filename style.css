@@ -5,69 +5,118 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#18140f;
+    font-family:Georgia, serif;
+    background:linear-gradient(180deg,#1a120b,#2d1d0d,#120d08);
     color:white;
 }
 
 header{
-    background:#2a2118;
-    padding:40px;
     text-align:center;
-    border-bottom:3px solid #9d7a36;
+    padding:60px 20px;
+    border-bottom:2px solid #b89040;
 }
 
 header h1{
-    font-size:48px;
-    color:#d9b96b;
+    font-size:60px;
+    color:#e2c26d;
+    text-shadow:0 0 15px rgba(255,210,100,.5);
 }
 
 header p{
-    margin-top:10px;
-    color:#d8d8d8;
+    margin-top:15px;
+    font-size:22px;
+    color:#ddd;
 }
 
 nav{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:20px;
-    background:#211912;
-    padding:18px;
+    gap:15px;
+    padding:20px;
+    background:#24180d;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    font-weight:bold;
+    padding:10px 18px;
+    border:1px solid #8a6a2d;
+    border-radius:8px;
+    transition:.3s;
 }
 
 nav a:hover{
-    color:#d9b96b;
+    background:#b89040;
+    color:#111;
 }
 
 .hero{
     max-width:900px;
-    margin:70px auto;
+    margin:60px auto;
     text-align:center;
-    padding:40px;
+    padding:20px;
 }
 
 .hero h2{
-    font-size:40px;
-    color:#d9b96b;
-    margin-bottom:20px;
+    font-size:42px;
+    color:#f0d27b;
+    margin-bottom:25px;
 }
 
 .hero p{
-    font-size:20px;
+    font-size:22px;
     line-height:1.8;
+}
+
+.play-button{
+    display:inline-block;
+    margin-top:30px;
+    padding:18px 35px;
+    background:#d5a741;
+    color:#111;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.play-button:hover{
+    transform:scale(1.05);
+    background:#f0c766;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:40px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.card{
+    background:#2d1d0d;
+    border:2px solid #8a6a2d;
+    border-radius:15px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(255,200,90,.4);
+}
+
+.card h3{
+    color:#f0d27b;
+    margin-bottom:15px;
 }
 
 footer{
     text-align:center;
-    padding:30px;
-    margin-top:80px;
-    background:#211912;
-    color:#888;
+    padding:40px;
+    margin-top:60px;
+    background:#24180d;
+    color:#999;
 }
